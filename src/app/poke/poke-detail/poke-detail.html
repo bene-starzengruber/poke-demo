@@ -1,1 +1,22 @@
-poke detail works
+<ng-container *ngIf="vm$ | async as vm">
+
+  <ng-container *ngIf="vm.selection">
+
+    <img [src]="vm.selection.image">
+
+    <div class="catch" (click)="catchOrRelase(vm.selection.id)">
+      {{ vm.caught.has(vm.selection.id) ? 'Release!' : 'Catch!' }}
+    </div>
+
+    <div class="title">Weight</div>
+    <div>{{ vm.selection.weight }}</div>
+
+    <div class="title">Experience</div>
+    <div>{{ vm.selection.experience }}</div>
+
+    <div class="title">Moves</div>
+    <div class="content">{{ vm.selection.moves.join(', ') }}</div>
+
+  </ng-container>
+
+</ng-container>

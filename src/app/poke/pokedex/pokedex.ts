@@ -4,11 +4,11 @@ import { PokeStore } from '../poke.store';
 @Component({
   selector: 'pokedex',
   templateUrl: './pokedex.html',
-  styleUrls: ['./pokedex.css'],
+  styleUrls: ['./pokedex.less'],
   providers: [PokeStore]
 })
 export class Pokedex {
-  constructor(private pokeStore: PokeStore) {}
+  constructor(private pokeStore: PokeStore) { }
 
   ngOnInit() {
     this.pokeStore.loadAllPokemon();
