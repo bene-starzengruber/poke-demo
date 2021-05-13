@@ -1,0 +1,6 @@
+<div class="poke-list_item" *ngFor="let pokemon of allPokemon$ | async">
+  <span class="poke-list_id">#{{ (pokemon.id + '').padStart(3, '0') }}</span>
+  <span class="poke-list_name">{{ pokemon.name }}</span>
+</div>
+
+<div class="poke-list_loading" *ngIf="loading$ | async">loading...</div>
