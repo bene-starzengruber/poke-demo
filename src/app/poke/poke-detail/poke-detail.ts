@@ -10,16 +10,14 @@ import { PokeStore } from '../poke.store';
 })
 export class PokeDetail {
 
-  vm$ = combineLatest([this.pokeStore.selection$, this.pokeStore.caught$]).pipe(
-    map(([selection, caught]) => ({ selection, caught }))
-  );
+  vm$ = null;
 
   constructor(private pokeStore: PokeStore) {
 
   }
 
   catchOrRelase(id: number) {
-    this.pokeStore.catchOrRelasePokemon(id);
+
   }
 
 }

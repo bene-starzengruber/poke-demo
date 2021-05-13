@@ -10,25 +10,19 @@ import { PokeStore } from '../poke.store';
   styleUrls: ['./poke-list.less'],
 })
 export class PokeList {
-  vm$ = combineLatest([
-    this.pokeStore.filteredPokemon$,
-    this.pokeStore.loading$,
-    this.pokeStore.selection$,
-    this.pokeStore.caught$]).pipe(
-      map(([pokemon, loading, selection, caught]) => ({ pokemon, loading, selection, caught }))
-    );
+  vm$ = null;
 
   constructor(private pokeStore: PokeStore) { }
 
   selectPokemon(pokemon: Pokemon) {
-    this.pokeStore.selectPokemon(pokemon.id);
+
   }
 
   catchAll() {
-    this.pokeStore.catchThemAll();
+
   }
 
   changeSearch(search: string) {
-    this.pokeStore.changeSearch(search);
+
   }
 }

@@ -11,6 +11,6 @@ export class Pokedex {
   constructor(private pokeStore: PokeStore) { }
 
   ngOnInit() {
-    this.pokeStore.loadAllPokemon();
+
   }
 }
