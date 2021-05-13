@@ -4,16 +4,15 @@
 
     <input type="text" (input)="changeSearch($event.target.value)">
 
-    <div *ngFor="let pokemon of vm.pokemon" class="poke-list_item"
+    <div *ngFor="let pokemon of vm?.pokemon" class="poke-list_item"
       [class.poke-list_item--selected]="pokemon.id === vm.selection?.id" (click)="selectPokemon(pokemon)">
       <span class="poke-list_id">#{{ (pokemon.id + '').padStart(3, '0') }}</span>
       <span class="poke-list_name">{{ pokemon.name }}</span>
-      <img *ngIf="vm.caught.has(pokemon.id)"
+      <img *ngIf="vm.caught?.has(pokemon.id)"
         src="https://www.freepnglogos.com/uploads/pokeball-png/pokemon-pokeball-regular-great-ultra-master-pokeball-2.png">
     </div>
 
     <div class="poke-list_item" (click)="catchAll()">Catch them all!</div>
-
 
   </ng-container>
 

@@ -5,7 +5,7 @@
     <img [src]="vm.selection.image">
 
     <div class="catch" (click)="catchOrRelase(vm.selection.id)">
-      {{ vm.caught.has(vm.selection.id) ? 'Release!' : 'Catch!' }}
+      {{ vm.caught?.has(vm.selection.id) ? 'Release!' : 'Catch!' }}
     </div>
 
     <div class="title">Weight</div>
