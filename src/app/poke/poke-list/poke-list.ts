@@ -11,7 +11,7 @@ import { PokeStore } from '../poke.store';
 })
 export class PokeList {
 
-  // expects { selection, caught, loading }
+  // expects { pokemon, selection, caught, loading }
   vm$ = null;
 
   constructor(private pokeStore: PokeStore) { }
