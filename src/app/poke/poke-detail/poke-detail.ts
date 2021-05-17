@@ -10,6 +10,7 @@ import { PokeStore } from '../poke.store';
 })
 export class PokeDetail {
 
+  // expects { selection, caught }
   vm$ = null;
 
   constructor(private pokeStore: PokeStore) {

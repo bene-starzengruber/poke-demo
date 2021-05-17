@@ -10,6 +10,8 @@ import { PokeStore } from '../poke.store';
   styleUrls: ['./poke-list.less'],
 })
 export class PokeList {
+
+  // expects { selection, caught, loading }
   vm$ = null;
 
   constructor(private pokeStore: PokeStore) { }
